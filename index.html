@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Market Intelligence Report — 4 Pharma Intermediates</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;padding:0;display:flex;min-height:100vh;font:13.5px/1.5 Segoe UI,Arial,sans-serif;color:#1a1a2e;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sidebar{width:260px;min-width:260px;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;background:#0d1b2a;z-index:100;color:#cfd8dc;padding-bottom:70px}
+.brand{padding:16px 14px 4px;color:#4fc3f7;font-weight:700;font-size:11px;letter-spacing:1px}
+.meta{padding:4px 14px;font-size:11px}.meta b{color:#fff}
+.sidebar-badge{display:inline-block;padding:4px 10px;border-radius:12px;font-size:10px;font-weight:600;margin:6px 14px 0 0}
+.badge-mode{background:#01579b;color:#b3e5fc;border:1px solid #0288d1}
+.confidential-notice{margin:12px 10px 16px;padding:10px 12px;background:rgba(255,193,7,.12);border:1px solid rgba(255,193,7,.35);border-radius:6px}
+.conf-title{color:#ffc107;font-size:10px;font-weight:700;letter-spacing:.5px;margin-bottom:5px}
+.conf-text{color:#b0bec5;font-size:9.5px;line-height:1.45}
+.nav-label{padding:8px 14px 2px;font-size:10px;color:#78909c;letter-spacing:1px}
+.nav-link{display:block;padding:6px 14px;color:#b0bec5;text-decoration:none;font-size:12px;border-left:3px solid transparent}
+.nav-link:hover,.nav-link.active{color:#4fc3f7;background:rgba(79,195,247,.08);border-left-color:#4fc3f7}
+.nav-num{display:inline-block;width:22px;color:#4fc3f7;font-weight:700}
+.pdfbtn{position:fixed;left:0;bottom:0;width:260px;padding:14px;background:#1565c0;color:#fff;border:0;font-size:13px;font-weight:700;cursor:pointer;z-index:101}
+.main-content{margin-left:260px;width:calc(100% - 260px);min-height:100vh;background:#f0f2f5}
+.hero{background:linear-gradient(135deg,#0d1b2a,#1565c0);color:#fff;padding:28px 32px}
+.hero h1{margin:0 0 6px;font-size:24px}.hero .sub{color:#b3e5fc;font-size:12px}
+.chip{display:inline-block;background:rgba(255,255,255,.12);border-radius:12px;padding:2px 10px;margin:8px 6px 0 0;font-size:11px}
+.tabs{display:flex;gap:4px;padding:12px 32px 0;background:#e3e8ef;position:sticky;top:0;z-index:50;flex-wrap:wrap}
+.tab{padding:9px 14px;background:#cfd8dc;border:0;border-radius:8px 8px 0 0;cursor:pointer;font-weight:600;font-size:12.5px;color:#37474f}
+.tab.on{background:#fff;color:#1565c0}
+.pane{display:none;padding:20px 32px 40px}.pane.on{display:block}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:18px}
+.kpi{background:#0d1b2a;color:#fff;border-radius:8px;padding:10px 12px}.kpi small{color:#90caf9;display:block;font-size:10px}.kpi b{font-size:13px}
+.report-section{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.05);padding:16px 18px;margin-bottom:16px}
+.report-section h2{margin:0 0 10px;font-size:16px;color:#0d1b2a;display:flex;align-items:center;gap:10px}
+.num{background:#1565c0;color:#fff;border-radius:5px;padding:2px 8px;font-size:13px}
+table{width:100%;border-collapse:collapse;margin:8px 0 12px;font-size:12.5px}
+th{background:#1565c0;color:#fff;text-align:left;padding:7px 9px}
+td{padding:6px 9px;border-bottom:1px solid #e0e0e0;vertical-align:top}
+tr:nth-child(even) td{background:#f5f9ff}tr:hover td{background:#e3f2fd}
+tr.in td{background:#fff8e1!important}tr.in td:first-child{border-left:3px solid #f9a825}
+.alert{padding:9px 12px;border-radius:6px;margin:8px 0;font-size:12.5px}
+.info{background:#e3f2fd;border-left:4px solid #1565c0}.warn{background:#fff3e0;border-left:4px solid #e65100}.ok{background:#e8f5e9;border-left:4px solid #1b5e20}.bad{background:#ffebee;border-left:4px solid #b71c1c}
+.verdict{color:#fff;border-radius:8px;padding:12px 16px;font-size:15px;font-weight:700;margin-bottom:10px}
+.v-green{background:#1b5e20}.v-amber{background:#e65100}.v-red{background:#b71c1c}
+.tag{padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700;color:#fff}
+.t-g{background:#1b5e20}.t-a{background:#e65100}.t-r{background:#b71c1c}
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:8px}.swot div{padding:10px;border-radius:8px;color:#fff;font-size:12px}
+.swot ul{margin:4px 0 0 16px;padding:0}
+.chain{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.step{padding:6px 10px;border-radius:6px;background:#cfd8dc;font-size:12px}.step.act{background:#1565c0;color:#fff}
+.steps{counter-reset:s;padding:0;list-style:none}.steps li{counter-increment:s;padding:4px 0 4px 36px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:3px;width:24px;height:24px;border-radius:50%;background:#1565c0;color:#fff;text-align:center;line-height:24px;font-weight:700}
+ol.refs{counter-reset:r;list-style:none;padding:0;font-size:12px}ol.refs li{counter-increment:r;padding:2px 0 2px 30px;position:relative;word-break:break-all}
+ol.refs li:before{content:counter(r)".";position:absolute;left:0;color:#1565c0;font-weight:700}
+a{color:#1565c0}
+footer{background:#0d1b2a;color:#b0bec5;padding:18px 32px;font-size:11px}
+@media print{.sidebar,.pdfbtn,.tabs{display:none}.main-content{margin:0;width:100%}.pane{display:block!important;page-break-before:always}}
+</style></head><body>
+<aside class="sidebar">
+<div class="brand">MARKET INTELLIGENCE</div>
+<div class="meta"><b>4 Chiral Pharma Intermediates</b><br>Report date: October 2026</div>
+<div style="padding:0 4px"><span class="sidebar-badge badge-mode">Secondary Research — No Trade Data</span></div>
+<div class="confidential-notice"><div class="conf-title">🔒 CONFIDENTIAL</div><div class="conf-text">For Internal Management Use Only. Based on publicly available secondary research. Market size estimates from third-party sources may vary. Not investment or financial advice.</div></div>
+<div class="nav-label">SECTIONS (ACTIVE TAB)</div>
+<div id="nav"></div>
+<button class="pdfbtn" onclick="window.print()">⬇ Download PDF</button>
+</aside>
+<main class="main-content">
+<div class="hero"><h1>Market Intelligence & Feasibility Report</h1>
+<div class="sub">Report Type: Secondary Market Research — No Trade Data &nbsp;|&nbsp; Prepared by: Market Intelligence</div>
+<span class="chip">Gadobutrol ligand</span><span class="chip">Bepotastine intermediate</span><span class="chip">Tegoprazan intermediate</span><span class="chip">Brivaracetam intermediate</span></div>
+<div class="tabs" id="tabs"></div>
+<div id="panes"></div>
+<footer>CONFIDENTIAL — Internal management use only. Prepared by: Market Intelligence. Use ⬇ Download PDF (browser print → Save as PDF; all four tabs print).</footer>
+</main>
+<script>
+const NA='Not publicly available — not retrieved in this research pass; verify before use';
+const L=(u,t)=>`<a href="${u}" target="_blank">${t||'source'}</a>`;
+const S={
+ pc:'https://patents.google.com/patent/US11091449', pc2:'https://patents.google.com/patent/US12180237', sml:'https://www.smolecule.com/products/s773596',
+ ncats:'https://drugs.ncats.io/substance/JT9XJK7X8X', cb2:'https://www.chemexpress.com/product/HY-32242', syn:'https://synzeal.com/bepotastine-impurity-a-tartrate',
+ cipo:'https://brevets-patents.ic.gc.ca/opic-cipo/cpd/eng/patent/2687445/summary.html', cs3:'https://clearsynth.com/product/CS-O-38328', csl:'https://www.clearsynth.com/reference-standards-Tegoprazan',
+ sm3:'https://www.smolecule.com/products/s3125924', opp:'https://ma.x-mol.com/paper/1755006433648939008', syz3:'https://www.synzeal.com/br/tegoprazan-impurity-8',
+ uspto:'https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11518741', cbk:'https://chemicalbook.com/CASEN_63095-51-2.htm', cbp:'https://www.chemicalbook.com/Price/63095-51-2.htm',
+ pcp:'https://pharmacompass.com/pharmaceutical-intermediate/63095-51-2', cphi:'https://www.cphi-online.com/product/r-4-propyldihydrofuran-23h-one-2/', mol:'https://www.molcore.com/product/63095-51-2', cbs:'https://api.chemicalbook.com/ProdSupplierGWCB82747297_EN.htm', usb:'https://www.usbio.net/biochemicals/414513/2-%5B/data-sheet'
+};
+const IN_REG=[['🇮🇳 India — CPCB','Chemical/pharma intermediate: hazardous-chemical & effluent rules apply to manufacture (state PCB consent)','Verify with state PCB'],['🇮🇳 India — DGFT Import','Generally freely importable under ITC-HS; confirm HS line before filing','Verify on DGFT portal'],['🇮🇳 India — DGFT Export','Not known to be SCOMET-listed; confirm per product','Verify SCOMET list'],['🇮🇳 India — CDSCO / Schedule M','Intermediate is not a licensed drug; downstream API/formulation needs CDSCO approval and GMP (Schedule M)','CDSCO'],['🇮🇳 India — Overall','Trading/sourcing of the intermediate is low-licence; manufacturing needs state licences + PCB consent. No specific India regulatory notice found for this CAS.','—']];
+const GL_REG=[['🇺🇸 USA — EPA TSCA','R&D exemption / inventory check needed for commercial import','Verify TSCA inventory'],['🇪🇺 EU — REACH/CLP','Registration needed above 1 t/yr; intermediates may use strictly-controlled-conditions route','ECHA'],['🇨🇳 China — MEE','New-substance notification if not on IECSC','Verify'],['🇯🇵 Japan — METI/ENCS','CSCL notification if manufactured/imported above thresholds','Verify']];
+const STEPS=['Confirm HS code & customs classification (Month 1)','Request quotes + COA/spec sheets from 3 suppliers (Month 1–2)','Validate QC method & chiral purity in-house (Month 2–3)','Run patent/FTO check on downstream API route (Month 2–4)','Approach 5 priority customers with samples (Month 3–6)','Decide trading vs. manufacturing at 6-month review (Month 6)'];
+const CHAIN=['Raw Material','Synthesis','Sourcing/Import','Quality Testing','Distribution','Export','End Customer'];
+const P=[
+{id:'p1',tab:'1 · Butrol (Gadobutrol ligand)',title:'Butrol — Gadobutrol macrocyclic ligand',cas:'151852-61-8',kpi:[['CAS','151852-61-8'],['Role','Ligand for gadobutrol (Gadovist/Gadavist)'],['Class','Macrocyclic DO3A derivative'],['Global size',NA],['India',NA],['Verdict','CONDITIONAL']],
+ s01:[['Chemical name','2,2′,2″-[10-(1,3,4-trihydroxybutan-2-yl)-1,4,7,10-tetraazacyclododecane-1,4,7-triyl]triacetic acid ("butrol")',L(S.pc)],['CAS','151852-61-8 (supplied "Rel-" i.e. relative stereochemistry)',L(S.sml)],['Formula / MW','C18H34N4O9 / ~450.5 (calculated from structure — verify with supplier COA)','calc.'],['Other IDs (InChI, EC, PubChem CID)',NA,'—'],['HS code India / Intl','Likely 2933.99 (heterocyclic, N-only) — confirm with customs; not verified','—'],['Role','Core precursor of gadobutrol, an MRI contrast agent; gadobutrol is a racemate Gd(III) complex of butrol',L(S.pc2)],['Physical data (MP, BP, solubility)',NA,'—'],['Grades','Final API needs <0.03% free ligand, so high-purity butrol is required',L(S.sml)]],
+ s02:[['Route 1','Introduce trihydroxybutyl group onto cyclen/DO3A framework, then alkylate with chloroacetic acid; two industrial routes described',L(S.pc)],['Route 2 (patent)','Intermediate (Formula 2) alkylated with chloroacetic acid → butrol; then complexed with gadolinium oxide in water up to ~90 °C',L(S.pc)],['Route 3 (patent)','Purity-managed intermediate route giving butrol ≥90–98% purity before Gd complexation',L(S.pc2)],['Raw materials','Cyclen (1,4,7,10-tetraazacyclododecane), chloroacetic acid, butane-triol epoxide/lactone type side-chain precursors, Gd2O3 (downstream). India availability: not verified','—'],['Complexity','HIGH — macrocycle chemistry, multiple stereocentres, tight impurity control (ICH ≤0.1%)',L(S.pc2)]],
+ s03:[['MRI contrast agents (sole commercial use found)','Gadobutrol (Gadovist/Gadavist); macrocyclic cage binds Gd tightly, giving higher safety vs linear agents re: NSF',L(S.pc)],['Market size / CAGR','Butrol-specific: '+NA+'. Proxy: gadobutrol/GBCA market — sizing not retrieved','—'],['Research / reference standards','Cyclen-based DO3A ligand for chelation research',L(S.sml)]],
+ s04:[['Global market','Butrol demand is derived from generic/branded gadobutrol output; '+NA,'—'],['🇮🇳 India status','Import vs. domestic split: '+NA,'—'],['Manufacturers / suppliers','Catalogue suppliers found (e.g. Smolecule); commercial-scale supplier list not retrieved','—']],
+ s05:[['Patent activity','Multiple purity-focused gadobutrol/butrol process patents (US11091449, US12180237, US10065933) show active generic-process competition',L(S.pc)],['Other news','No dated 6–12 month news retrieved — '+NA,'—']],
+ s06:[['Research grade','Catalogue price not retrieved','—'],['Bulk','Not publicly available; request quotes. Pricing proxy would be gadobutrol API price ×  ligand cost share (not computed)','—'],['🇮🇳 India import additions','Basic customs duty + IGST (check HS) + logistics — rates not verified','—'],['Trend',NA,'—']],
+ s08:[['Gadolinium contrast API makers (global/India)','Companies making generic gadobutrol — identify via patent assignees and DMF/CEP filings (not listed here to avoid unverified claims)','Why: direct ligand buyers'],['Indian CDMOs with macrocycle capability','Candidate screening segment — verify each','Why: outsourcing of ligand step']],
+ swot:[['Macrocyclic agents favoured on safety (NSF)','Complex, multi-step; chiral/impurity control','Generic gadobutrol process development','Few buyers; big-pharma captive supply']],
+ verdict:['v-amber','CONDITIONAL — attractive high-value niche, but buyer base is narrow and no market data was retrievable.'],
+ modes:[['Import & Domestic Trading','t-a','Needs identified API-maker buyers first'],['Sourcing & Marketing','t-g','Good fit if qualified suppliers found'],['CRO/R&D Support','t-g','Process/purity development demand'],['Export','t-a','Depends on buyer discovery'],['Manufacturing','t-r','High complexity, high capex']]},
+{id:'p2',tab:'2 · Bepotastine intermediate',title:'(S)-2-[(4-Chlorophenyl)(4-piperidinyloxy)methyl]pyridine',cas:'201594-84-5',kpi:[['CAS','201594-84-5'],['Role','Chiral intermediate of bepotastine'],['Formula','C17H19ClN2O · 302.80'],['Global size',NA],['India',NA],['Verdict','CONDITIONAL']],
+ s01:[['IUPAC / name','(S)-2-[(4-chlorophenyl)(piperidin-4-yloxy)methyl]pyridine',L(S.ncats)],['CAS','201594-84-5 (free base); tartrate salt CAS 210095-58-2',L(S.syn)],['Formula / MW','C17H19ClN2O / 302.80',L(S.cb2)],['InChIKey','OTZYADIPHOGUDN-KRWDZBQOSA-N; one defined stereocentre; levorotatory (−)',L(S.ncats)],['HS / HSN','Reference-standard listings use HSN 38229010; bulk intermediate HS not verified',L(S.syn)],['Solubility / storage','Soluble in chloroform, DMSO; one vendor stores at −20 °C (racemate listing, CAS 122368-54-1)',L(S.usb)],['Grades','Research & reference-standard grades; bulk specs not retrieved','—']],
+ s02:[['Route (patent)','Racemic (RS)-4-[(4-chlorophenyl)(2-pyridyl)methoxy]piperidine resolved to the (S)-(−) enantiomer; then N-alkylation to bepotastine',L(S.cipo)],['Resolution','Classical resolution with chiral acid (the (2R,3R)-tartrate salt is commercially listed)',L(S.syn)],['Complexity','MEDIUM–HIGH — resolution yields max 50% unless racemate is recycled; yield/ee data not retrieved','—'],['Raw materials','4-chlorophenyl-(2-pyridyl)methanol derivatives, 4-hydroxypiperidine, tartaric acid. India availability: not verified','—']],
+ s03:[['Antihistamine API (bepotastine besilate)','Non-sedating H1 antagonist; used for allergic rhinitis, pruritus, urticaria; ophthalmic use also exists (general knowledge — verify)',L(S.cb2)],['Application market size','Bepotastine/ophthalmic antihistamine sizing: '+NA,'—'],['Reference standards','Impurity A / condensed-ether impurity standards for ANDA work',L(S.syn)]],
+ s04:[['Global market','Niche; derived from bepotastine volumes. '+NA,'—'],['🇮🇳 India','Reference-standard suppliers declare India origin (SynZeal); bulk intermediate market: '+NA,L(S.syn)]],
+ s05:[['Process patents','Resolution/recycling process patents exist (CA 2687445)',L(S.cipo)],['Other news','No 6–12 month news retrieved — '+NA,'—']],
+ s06:[['All scales','Public price not retrieved; quote-based','—'],['🇮🇳 India import additions','Duty + IGST + logistics — not verified','—']],
+ s08:[['Bepotastine API/generic makers','Identify via DMF/CEP and Japan/Korea/US generic filings','Direct buyers'],['Ophthalmic formulators','Verify via product databases','Downstream']],
+ swot:[['Single stereocentre, established resolution','Max 50% unrecovered unless recycled','Generic bepotastine growth','Narrow demand; single-API dependence']],
+ verdict:['v-amber','CONDITIONAL — workable chemistry, but demand data and buyers must be confirmed.'],
+ modes:[['Import & Domestic Trading','t-a','Quote-driven; small volumes'],['Sourcing & Marketing','t-g','Many catalogue suppliers'],['CRO/R&D Support','t-g','Impurity-standard demand'],['Export','t-a','Verify buyers'],['Manufacturing','t-a','Feasible if racemate recycling is mastered']]},
+{id:'p3',tab:'3 · Tegoprazan intermediate',title:'(R)-5,7-Difluorochroman-4-ol',cas:'1270294-05-7',kpi:[['CAS','1270294-05-7'],['Role','Key intermediate of tegoprazan (P-CAB)'],['Formula','C9H8F2O2 · 186.16'],['Global size',NA],['India',NA],['Verdict','RECOMMENDED']],
+ s01:[['IUPAC','(4R)-5,7-difluoro-3,4-dihydro-2H-chromen-4-ol',L(S.sm3)],['CAS','1270294-05-7; (S)-enantiomer 942195-91-7',L(S.csl)],['Formula / MW','C9H8F2O2 / 186.15–186.16',L(S.cs3)],['InChIKey','HGTYMLFMXKYIQW-SSDOTTSWSA-N',L(S.sm3)],['HSN','38229010 (reference-standard listing, India origin)',L(S.syz3)],['Synonyms','(4R)-5,7-Difluoro-3,4-dihydro-2H-1-benzopyran-4-ol; "Tegoprazan Impurity 8"',L(S.cs3)],['Physical data',NA,'—']],
+ s02:[['Route 1','Asymmetric reduction of 5,7-difluorochroman-4-one',L(S.sm3)],['Route 2','"Practical green synthesis" published in Org. Prep. Proced. Int. (2024)',L(S.opp)],['Precursor chain','3,5-difluorophenol → 3-(3,5-difluorophenoxy)propan-1-ol → chromanone (catalogued intermediates)',L(S.csl)],['Complexity','MEDIUM — one stereocentre; enantioselective reduction (catalytic/biocatalytic) is the key control; fluorinated aromatics add cost','—'],['India note','Reference-standard suppliers already list India origin; scale-up in India is plausible','—']],
+ s03:[['Pharmaceutical — P-CAB for gastric acid disorders','Key intermediate of tegoprazan, a potassium-competitive acid blocker',L(S.sm3)],['Application market size','Tegoprazan/P-CAB market sizing: '+NA,'—'],['Reference standards','Used for AMV/QC in ANDA and commercial tegoprazan production',L(S.syz3)]],
+ s04:[['Global market','Demand follows tegoprazan roll-out; '+NA,'—'],['🇮🇳 India','Suppliers of reference standards and "in stock" listings indicate local activity; bulk volumes unknown',L(S.syz3)],['Suppliers found','Clearsynth, SynZeal, MedChemExpress (catalogue); multiple Chinese traders promote it','Various']],
+ s05:[['Green synthesis paper','2024 publication on green synthesis shows process optimisation interest',L(S.opp)],['Other news','No dated 6–12 month news retrieved — '+NA,'—']],
+ s06:[['All scales','No public price; Clearsynth lists as enquiry/back-order',L(S.csl)],['🇮🇳 India import additions','Duty + IGST + logistics — not verified','—']],
+ s08:[['Tegoprazan API/generic developers','Verify via filings; P-CAB generics attract Indian API makers','Direct buyers'],['Indian CDMOs','Screening segment','Outsourced chiral step']],
+ swot:[['Single stereocentre; clear asymmetric-reduction route','Fluorinated precursors raise cost','Growing P-CAB class','IP/process patents; Chinese price pressure']],
+ verdict:['v-green','RECOMMENDED for sourcing/trading and CRO — tractable chemistry with visible catalogue demand; confirm IP and buyers.'],
+ modes:[['Import & Domestic Trading','t-g','Catalogue and API demand'],['Sourcing & Marketing','t-g','Many suppliers; margin via QC'],['CRO/R&D Support','t-g','Asymmetric reduction know-how'],['Export','t-a','Verify buyers'],['Manufacturing','t-a','Feasible; check FTO']]},
+{id:'p4',tab:'4 · Brivaracetam intermediate',title:'(R)-4-Propyldihydrofuran-2(3H)-one',cas:'63095-51-2',kpi:[['CAS','63095-51-2'],['Role','Key intermediate of brivaracetam'],['Formula','C7H12O2 · 128.17'],['Price (5–10 g)','$450 / 5 g (2021); $900 / 10 g (Jun 2026)'],['India suppliers','27 listed (ChemicalBook)'],['Verdict','RECOMMENDED']],
+ s01:[['IUPAC','(4R)-4-propyloxolan-2-one',L(S.pcp)],['CAS / EC','63095-51-2 / EC 13-650-7 (as listed)',L(S.cbs)],['Formula / MW','C7H12O2 / 128.17',L(S.pcp)],['InChIKey / UNII','NVTUTJMZAZZKAZ-ZCFIWIBFSA-N / LP4GE5VL92',L(S.pcp)],['Appearance','Yellow oily liquid (one source)',L(S.cbk)],['Storage','2–8 °C; NLT 98% grade',L(S.mol)],['Synonyms','Brivaracetam Intermediate 1; (R)-dihydro-4-propyl-2(3H)-furanone; Brivaracetam Impurity 13',L(S.cbk)],['HS code',NA,'—']],
+ s02:[['Route (literature)','Chiral lactone used with L-aminobutanamide to give brivaracetam (CN107663185A)',L(S.uspto)],['Route issue','Route to the chiral lactone is long and uses metal reagents',L(S.uspto)],['Alternative','Epimeric-acid salt resolution with R-phenethylamine (CN106748950A) — different intermediate',L(S.uspto)],['Complexity','HIGH — enantiopure γ-butyrolactone; route length is the cost driver','—']],
+ s03:[['Antiepileptic API — brivaracetam','Developed by UCB; FDA-approved Feb 2016 as adjunct in partial-onset seizures',L(S.uspto)],['Application market size','Brivaracetam market sizing: '+NA,'—'],['Impurity/reference standard','Also catalogued as Brivaracetam Impurity 3/4/13/40',L(S.cbk)]],
+ s04:[['Suppliers','India (27), US (7) listings on ChemicalBook; Chengdu Miracle (China) offers 1/10/25 kg packs',L(S.cbs)],['🇮🇳 India','Indian suppliers present; capacity unverified',L(S.cbs)]],
+ s05:[['Process patents','Newer patents target shorter brivaracetam routes that may bypass this lactone — demand risk',L(S.uspto)],['Other news','No dated 6–12 month news retrieved — '+NA,'—']],
+ s06:[['Research grade','Alichem 5 g $450 (Dec 2021); Biosynth 10 g $900 (Jun 2026) — catalogue prices, not bulk',L(S.cbp)],['Bulk','Kg-scale supplier available (Chengdu Miracle); price on request',L(S.cphi)],['🇮🇳 India import additions','Duty + IGST + logistics — not verified','—']],
+ s08:[['Brivaracetam API/generic makers','Verify via DMF/filings','Direct buyers'],['Indian CDMOs','Screening segment','Outsourced chiral step']],
+ swot:[['Established API demand; many suppliers to benchmark','Long chiral route','Generic brivaracetam entries','Alternative routes bypass lactone']],
+ verdict:['v-green','RECOMMENDED for sourcing/trading — established API with visible supplier ecosystem; watch route-substitution risk.'],
+ modes:[['Import & Domestic Trading','t-g','Standard QC + cold-chain handling'],['Sourcing & Marketing','t-g','Fragmented supply'],['CRO/R&D Support','t-g','Enantiopure lactone know-how'],['Export','t-a','Verify buyers'],['Manufacturing','t-a','Long route; check FTO']]}
+];
+const tb=(h,r,inRows)=>`<table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r.map(x=>`<tr${inRows?' class="in"':''}>${x.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</table>`;
+const SEC=[['01','Product Overview'],['02','Synthesis & Manufacturing'],['03','Applications & Market Sizes'],['04','Market Analysis'],['05','News & Intelligence'],['06','Pricing Intelligence'],['07','Regulatory & Compliance'],['08','Target Customers'],['09','Strategic Frameworks'],['10','Feasibility & Recommendation'],['R','Sources & References']];
+const refs=Object.values(S);
+function sec(p,n,t,body){return `<section id="${p.id}-s${n}" class="report-section"><h2><span class="num">${n}</span>${t}</h2>${body}</section>`}
+function render(p){
+ const g=(x)=>x;
+ let h=`<div class="kpis">${p.kpi.map(k=>`<div class="kpi"><small>${k[0]}</small><b>${k[1]}</b></div>`).join('')}</div><div class="alert info"><b>${p.title}</b> · CAS ${p.cas} — Report Type: Secondary Market Research (no trade data). Items marked "not publicly available" were not found in this research pass and are not estimated.</div>`;
+ h+=sec(p,'01','Product Overview & Identity',tb(['Property','Value','Source'],p.s01));
+ h+=sec(p,'02','Synthesis & Manufacturing',tb(['Route / Material','Details','Reference'],p.s02));
+ h+=sec(p,'03','Industry Applications & Market Sizes',tb(['Application','Details','Market size / Source'],p.s03));
+ h+=sec(p,'04','Market Analysis',tb(['Segment','Finding','Source'],p.s04.map(r=>r)).replace(/<tr>/g,(m,o)=>m));
+ h+=sec(p,'05','Latest News & Industry Intelligence',tb(['Item','Summary','Source'],p.s05));
+ h+=sec(p,'06','Pricing Intelligence',tb(['Scale','Price / Finding','Source'],p.s06));
+ h+=sec(p,'07','Regulatory, Licensing & Compliance',tb(['Country / Body','Classification / Licence','Source / Action'],IN_REG,true)+tb(['Country / Body','Classification / Licence','Source / Action'],GL_REG)+'<div class="alert ok">India: trading and sourcing are low-licence; manufacturing needs state licences and PCB consent. No product-specific notice found — verify before commitment.</div>');
+ h+=sec(p,'08','Target Customers',tb(['Segment','Detail','Why a target'],p.s08)+'<div class="alert warn">Named Indian/global company lists (min. 10 / 8) were not compiled: no source-verified buyer names were retrieved, and company names are not guessed. Next pass: DMF/CEP filings and customs data.</div>');
+ const s=p.swot[0];
+ h+=sec(p,'09','Strategic Frameworks',`<div class="swot"><div style="background:#1b5e20"><b>Strengths</b><ul><li>${s[0]}</li></ul></div><div style="background:#b71c1c"><b>Weaknesses</b><ul><li>${s[1]}</li></ul></div><div style="background:#1565c0"><b>Opportunities</b><ul><li>${s[2]}</li></ul></div><div style="background:#e65100"><b>Threats</b><ul><li>${s[3]}</li></ul></div></div><div class="chain">${CHAIN.map((c,i)=>`<span class="step ${[1,2,3,4].includes(i)?'act':''}">${c}</span>`).join('')}</div><div class="alert info">Active steps: Synthesis (selective), Sourcing/Import, Quality Testing, Distribution.</div>`);
+ h+=sec(p,'10','Feasibility Summary & Recommendation',`<div class="verdict ${p.verdict[0]}">${p.verdict[1]}</div>`+tb(['Business mode','Recommendation','Rationale'],p.modes.map(m=>[m[0],`<span class="tag ${m[1]}">${m[1]=='t-g'?'FAVOURABLE':m[1]=='t-a'?'CONDITIONAL':'NOT ADVISED'}</span>`,m[2]]))+tb(['Risk','Level','Mitigation'],[['Limited public market/price data','<span class="tag t-r">HIGH</span>','Obtain supplier quotes and paid market data'],['IP / patent on downstream API route','<span class="tag t-a">MED</span>','FTO check'],['Buyer concentration','<span class="tag t-a">MED</span>','Build 5+ customer pipeline'],['Chiral purity / quality failure','<span class="tag t-a">MED</span>','Validate ee by chiral HPLC on each lot'],['Route substitution by API makers','<span class="tag t-a">MED</span>','Track patent landscape']])+`<ol class="steps">${STEPS.map(x=>`<li>${x}</li>`).join('')}</ol>`);
+ return h;}
+const tabs=document.getElementById('tabs'),panes=document.getElementById('panes'),nav=document.getElementById('nav');
+P.forEach((p,i)=>{tabs.insertAdjacentHTML('beforeend',`<button class="tab" data-i="${i}">${p.tab}</button>`);panes.insertAdjacentHTML('beforeend',`<div class="pane" id="pane-${p.id}">${render(p)}</div>`);});
+panes.insertAdjacentHTML('beforeend',`<div class="pane" style="display:block;padding-top:0"><section class="report-section" id="refs"><h2><span class="num">R</span>Sources & References</h2><ol class="refs">${refs.map(u=>`<li><a href="${u}" target="_blank">${u}</a></li>`).join('')}</ol><div class="alert warn">${refs.length} sources retrieved via web search (target was 20+). Remaining market, pricing, regulatory and customer data require further sourcing.</div></section></div>`);
+function show(i){document.querySelectorAll('.tab').forEach((t,k)=>t.classList.toggle('on',k==i));document.querySelectorAll('.pane[id^=pane-]').forEach((e,k)=>e.classList.toggle('on',k==i));
+ nav.innerHTML=SEC.map(s=>s[0]=='R'?`<a class="nav-link" href="#refs"><span class="nav-num">R</span>${s[1]}</a>`:`<a class="nav-link" href="#${P[i].id}-s${s[0]}" data-section="s${s[0]}"><span class="nav-num">${s[0]}</span>${s[1]}</a>`).join('');}
+tabs.addEventListener('click',e=>{if(e.target.dataset.i!==undefined){show(+e.target.dataset.i);window.scrollTo(0,0)}});
+show(0);
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-link').forEach(a=>a.classList.toggle('active',a.getAttribute('href')=='#'+e.target.id))}}),{rootMargin:'-20% 0px -70% 0px'}).observe&&(()=>{const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.nav-link').forEach(a=>a.classList.toggle('active',a.getAttribute('href')=='#'+e.target.id))}),{rootMargin:'-20% 0px -70% 0px'});document.querySelectorAll('.report-section').forEach(s=>o.observe(s))})();
+</script></body></html>
